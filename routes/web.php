@@ -79,9 +79,6 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
     Route::get('/laporan/gagal', [PengaduanController::class, 'laporanGagal'])->name('laporan.gagal');
 
     Route::post('/laporanUser', [PengaduanController::class, 'tambahLaporan'])->name('tambah.laporan');
-});
-
-Route::middleware(['auth', 'user-access:user'])->group(function () {
 
     Route::get('/home', [HomeController::class, 'index'])->name('home');
 
